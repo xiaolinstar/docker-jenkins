@@ -1,0 +1,19 @@
+networks:
+  jenkins-network:
+    external: false
+
+services:
+  docker-jenkins:
+    image: jenkins/jenkins:latest-jdk21
+    user: root
+    container_name: xiaolin-jenkins
+    ports:
+      - '8080:8080'
+      - '50000:50000'
+    networks:
+      - jenkins-network
+    privileged: true
+    volumes:
+      - '/usr/bin/docker:/usr/bin/docker'
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - './jenkins_home:/var/jenkins_home'
