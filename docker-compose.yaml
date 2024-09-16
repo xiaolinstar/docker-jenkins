@@ -17,3 +17,6 @@ services:
       - '/usr/bin/docker:/usr/bin/docker'
       - '/var/run/docker.sock:/var/run/docker.sock'
       - './jenkins_home:/var/jenkins_home'
+    # 设置上海时区
+    environment:
+      TZ: Asia/Shanghai

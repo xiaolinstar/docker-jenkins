@@ -87,3 +87,11 @@ docker logs xiaolin-jenkins
 ```
 
 查看日志信息，获取一串密钥，用于登录Jenkins Web服务
+
+### 安装插件
+Jenkins以插件的方式支持功能扩展，目前已经有1000+插件，除了安装社区推荐的插件外，建议安装以下插件：
+
+- Blue Ocean: BlueOcean Aggregator
+- Docker Commons: Provides the common shared functionality for various Docker-related plugins
+- Docker Compose Build Step: Docker Compose plugin for Jenkins
+
