@@ -7,18 +7,20 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
-
 > 基于docker-compose快速构建Jenkins容器，且Jenkins容器与宿主机docker环境连通，实现「docker in docker」。
 
 ## 项目特点
+
 - 使用docker部署Jenkins，与宿主机操作系统隔离，保证系统的隔离性和整洁性
 - 轻松支持多版本，不同操作系统环境迁移性（可移植性）强
 - Jenkins容器内置docker「docker in docker」，不必在Jenkins内部再安装npm maven go mysql等环境
 
 ## 更新日志
+
 2024-09-21：创建项目，首次提交
 
 ## 目录
+
 - [前置要求](#前置要求)
 - [快速开始](#快速开始)
 - [Jenkins快速体验](#jenkins快速体验)
@@ -33,11 +35,13 @@
 ## 快速开始
 
 克隆项目
+
 ```bash
 git clone https://github.com/xiaolinstar/docker-jenkins.git 
 ```
 
 进入项目
+
 ```bash
 cd docker-jenkins
 ```
@@ -93,6 +97,7 @@ docker info
 ## Jenkins快速体验
 
 Web体验，通过浏览器进入宿主机8080端口
+
 - 云服务： ${IP}:8080
 - 本地： http://localhost:8080
 
@@ -103,20 +108,25 @@ docker logs xiaolin-jenkins
 ```
 
 Jenkins以插件的方式支持功能扩展，目前已经有1000+插件，除了安装社区推荐的插件外，建议安装以下插件：
+
 - Blue Ocean: BlueOcean Aggregator
 - Docker Commons: Provides the common shared functionality for various Docker-related plugins
 - Docker Compose Build Step: Docker Compose plugin for Jenkins
 
-
 ## References
-[1] Jenkins用户手册，https://www.jenkins.io/zh/doc/
-[2] Blue Ocean UI，https://www.jenkins.io/zh/doc/book/blueocean/
-[3] Docker，https://www.docker.com/
+
+[1]. Jenkins用户手册，https://www.jenkins.io/zh/doc/
+
+[2]. Blue Ocean UI，https://www.jenkins.io/zh/doc/book/blueocean/
+
+[3]. Docker，https://www.docker.com/
 
 ## 联系作者
+
 :email: xing.xiaolin@foxmail.com
 
 <!-- links -->
+
 
 [contributors-shield]: https://img.shields.io/github/contributors/xiaolinstar/docker-jenkins.svg?style=flat-square
 [contributors-url]: https://github.com/xiaolinstar/docker-jenkins/graphs/contributors
