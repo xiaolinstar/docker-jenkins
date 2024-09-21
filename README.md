@@ -1,4 +1,4 @@
-# 持续集成、持续部署（CI/CD），Jenkins with 「docker in docker」
+# Jenkins with 「docker in docker」
 
 <!-- PROJECT SHIELDS -->
 
@@ -126,7 +126,6 @@ Jenkins以插件的方式支持功能扩展，目前已经有1000+插件，除�
 :email: xing.xiaolin@foxmail.com
 
 <!-- links -->
-
 
 [contributors-shield]: https://img.shields.io/github/contributors/xiaolinstar/docker-jenkins.svg?style=flat-square
 [contributors-url]: https://github.com/xiaolinstar/docker-jenkins/graphs/contributors

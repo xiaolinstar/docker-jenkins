@@ -4,7 +4,7 @@ networks:
 
 services:
   docker-jenkins:
-    image: jenkins/jenkins:lts-jdk17
+    image: jenkins/jenkins:lts-jdk21
     user: root
     container_name: xiaolin-jenkins
     ports:
