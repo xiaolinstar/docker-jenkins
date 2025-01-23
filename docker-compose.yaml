@@ -3,7 +3,7 @@ networks:
     external: false
 
 services:
-  docker-jenkins:
+  xiaolin-jenkins:
     image: jenkins/jenkins:lts-jdk21
     user: root
     container_name: xiaolin-jenkins
@@ -17,6 +17,7 @@ services:
       - '/usr/bin/docker:/usr/bin/docker'
       - '/var/run/docker.sock:/var/run/docker.sock'
       - './jenkins_home:/var/jenkins_home'
-    # 设置上海时区
+      - '/usr/libexec/docker/cli-plugins/:/usr/libexec/docker/cli-plugins' # docker 插件挂载
+      # 设置上海时区
     environment:
       TZ: Asia/Shanghai

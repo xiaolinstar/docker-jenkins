@@ -29,8 +29,8 @@
 
 ## 前置要求
 
-1. 默认基础环境：amd64 Linux，推荐使用Ubuntu22.04
-2. 安装docker和docker-compose
+1. 默认基础环境：amd64 Linux，推荐使用 Ubuntu LST Version
+2. 安装 docker 和 docker compose (V2)
 
 ## 快速开始
 
@@ -46,16 +46,17 @@ git clone https://github.com/xiaolinstar/docker-jenkins.git
 cd docker-jenkins
 ```
 
-检查挂载卷 ，本项目中`docker-compose.yaml`中的挂载卷值默认为：
+检查挂载卷 ，本项目中 `docker-compose.yaml` 中的挂载卷值默认为：
 
 ```yaml
 volumes:
   - '/usr/bin/docker:/usr/bin/docker'
   - '/var/run/docker.sock:/var/run/docker.sock'
-  - './jenkins_home:/var/jenkins_home'
+  - './jenkins_home:/var/jenkins_home' 
+  - '/usr/libexec/docker/cli-plugins/:/usr/libexec/docker/cli-plugins' # docker 插件挂载
 ```
 
-👀在Windows或macOS中下载Docker Desktop可能存在参数不一致，请自行检查并酌情修改
+👀在 Windows 或 macOS 中下载 Docker Desktop 可能存在参数不一致，请自行检查并酌情修改
 
 ```yaml
 # Macbook Pro M1pro 
@@ -64,6 +65,7 @@ volumes:
   - '/usr/local/bin/docker:/usr/bin/docker'
   - '~/.docker/run/docker.sock:/var/run/docker.sock'
   - './jenkins_home:/var/jenkins_home'
+  - '~/.docker/cli-plugins:/usr/libexec/docker/cli-plugins'  
 ```
 
 启动容器
@@ -75,13 +77,13 @@ mkdir jenkins_home && docker compose up -d
 
 检查容器状态
 
-启动的Jenkins容器名默认为`xiaolin-jenkins`
+启动的Jenkins容器名默认为 `xiaolin-jenkins`
 
 ```bash
 docker ps
 ```
 
-进入`xiaolin-jenkins`容器内部，查看`docker`命令
+进入 `xiaolin-jenkins` 容器内部，查看 `docker` 命令
 
 ```bash
 # 宿主机执行
@@ -123,7 +125,8 @@ Jenkins以插件的方式支持功能扩展，目前已经有1000+插件，除�
 
 ## 联系作者
 
-:email: xing.xiaolin@foxmail.com
+1. 在issues中提问
+2. 联系邮箱 :email: xing.xiaolin@foxmail.com
 
 <!-- links -->
 
